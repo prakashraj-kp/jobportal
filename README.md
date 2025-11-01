@@ -20,21 +20,22 @@ It allows users to register, post jobs, apply for jobs, and manage applications 
 
 1. Clone the repository
 
-    git clone https://github.com/prakashraj-kp/job-portal.git
+    git clone [https://github.com/prakashraj-kp/job-portal.git](https://github.com/prakashraj-kp/jobportal/tree/master?tab=readme-ov-file)
+   
     cd job-portal
 
-2. Configure the MySQL database in application.properties:
+3. Configure the MySQL database in application.properties:
 
     spring.datasource.url=jdbc:mysql://localhost:3306/job_portal
     spring.datasource.username=root
     spring.datasource.password=yourpassword
   spring.jpa.hibernate.ddl-auto=update
      
-3. Run the application
+4. Run the application
 
      mvn spring-boot:run
 
-4. Open in browser
+5. Open in browser
 
     http://localhost:8080
 
@@ -42,6 +43,6 @@ It allows users to register, post jobs, apply for jobs, and manage applications 
 
 **Prakash Raj**  
 📧 **Email:** prakashraj2020.pk@gmail.com  
-🌐 **GitHub:** [github.com/prakashraj123](https://github.com/prakashraj-kp)
+🌐 **GitHub:** [github.com/prakashraj-kp](https://github.com/prakashraj-kp)
 
 
