@@ -3,6 +3,23 @@
 This is a Job Portal Web Application built using Spring Boot 3, Spring Data JPA, Hibernate, MySQL, and Thymeleaf.
 It allows users to register, post jobs, apply for jobs, and manage applications in an intuitive and secure environment.
 
+## 🚀 Features
+
+🔐 User registration and login (Spring Security)
+
+👨‍💼 Separate roles for Admin, Recruiter, and Job Seeker
+
+📝 Create, edit, delete, and view job listings
+
+💼 Apply for jobs and track application status
+
+🔍 Search and filter job posts
+
+🧭 Admin dashboard to manage users and job posts
+
+💻 Responsive web design with Thymeleaf and Bootstrap
+
+
 ![Job Portal Screenshot](src/main/resources/static/assets/spring-boot-job-portal-project-image.png)
 
 ## 🧩 Tech Stack
