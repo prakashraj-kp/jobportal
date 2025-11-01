@@ -257,6 +257,7 @@ public class JobPostActivityController {
         model.addAttribute("user", usersService.getCurrentUserProfile());
         return "add-jobs";
     }
+
     @GetMapping("/dashboard/deleteJob/{id}")
     public String deleteJob(@PathVariable("id") Integer id) {
         jobPostActivityService.deleteById(id);

@@ -60,7 +60,7 @@ public class JobSeekerSaveController {
     @GetMapping("saved-jobs/")
     public String savedJobs(Model model) {
 
-        List<JobPostActivity> jobPost = new ArrayList<>();
+       /** List<JobPostActivity> jobPost = new ArrayList<>();
         Object currentUserProfile = usersService.getCurrentUserProfile();
 
         List<JobSeekerSave> jobSeekerSaveList = jobSeekerSaveService.getCandidatesJob((JobSeekerProfile) currentUserProfile);
@@ -71,6 +71,24 @@ public class JobSeekerSaveController {
         model.addAttribute("jobPost", jobPost);
         model.addAttribute("user", currentUserProfile);
 
-        return "saved-jobs";
+        return "saved-jobs";**/
+       Object currentUserProfile = usersService.getCurrentUserProfile();
+        // Check if the logged-in user is a JobSeeker
+        if (currentUserProfile instanceof JobSeekerProfile) {
+            JobSeekerProfile jobSeeker = (JobSeekerProfile) currentUserProfile;
+
+            List<JobPostActivity> jobPost = new ArrayList<>();
+            List<JobSeekerSave> jobSeekerSaveList = jobSeekerSaveService.getCandidatesJob(jobSeeker);
+
+            for (JobSeekerSave jobSeekerSave : jobSeekerSaveList) {
+                jobPost.add(jobSeekerSave.getJob());
+            }
+
+            model.addAttribute("jobPost", jobPost);
+            model.addAttribute("user", currentUserProfile);
+            return "saved-jobs";
+        }
+
+        return "error-page"; // or redirect:/recruiter-dashboard
     }
 }

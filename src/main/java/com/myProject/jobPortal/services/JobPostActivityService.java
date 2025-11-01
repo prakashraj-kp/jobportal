@@ -63,4 +63,5 @@ public class JobPostActivityService {
         jobPostActivityRepository.save(jobPostActivity);
     }
 
+
 }
